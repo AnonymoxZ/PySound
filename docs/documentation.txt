@@ -1,0 +1,4 @@
+Project Name: PySound;
+started: 09-02-25 01:45;
+version: prototype;
+description: music player made in Python;
