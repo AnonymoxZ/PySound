@@ -1,0 +1,3 @@
+Hear my musics, no ads :)
+
+The PySound playing musics, in sequencies of arrays.
