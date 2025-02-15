@@ -1,5 +1,5 @@
 # PySound vPrototype 2025 - by AnonymoxZ
-from AppPlayerGUI import appPlayer
+from AppPlayerGUI import Player
 
 # run app
-appPlayer()
+Player()
