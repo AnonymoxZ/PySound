@@ -172,3 +172,8 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# docs
+docs/*nota.txt
+*setup.bat
+audio_files/
