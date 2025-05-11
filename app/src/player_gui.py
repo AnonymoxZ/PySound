@@ -2,6 +2,7 @@ import PySimpleGUI as sg
 from pygame import mixer
 from play import *
 import audiodb
+from os import system
 
 
 # settigs window
@@ -25,15 +26,14 @@ def Player():
     player_gui = [[sg.Column([[img_interface]], justification='center')],
     [sg.Column([[icon_left_arrow]], justification='left'),sg.Column([[icon_pause]], justification='center'), sg.Column([[icon_right_arrow]], justification='right')],
     [sg.Button('Cancel playlist',font=10, button_color='red')]]
-    
-    playlist_gui = [[sg.Listbox([m for m in audiodb.text_musics], size=(50,len(audiodb.files_musics)+10))]]
-    
+    # tab playlist
+    playlist_gui = [[sg.Listbox([m for m in audiodb.text_musics], size=(50,len(audiodb.files_musics)+10), text_color='LightGreen')]]
+
+    # tab player - main
     interface = [[sg.TabGroup([[sg.Tab('Play',player_gui), sg.Tab('Playlist',playlist_gui)]])]]
     
     window = sg.Window(title, interface,size=size_screen,icon=icon_win)
     # ***********************************************************************************
-
-    # data control
     # --------------
     pause_on = None
     # ---------------
@@ -44,33 +44,34 @@ def Player():
         if event == sg.WIN_CLOSED:
             break
         elif event == 'button-play':
+            system('cls')
             print(f'Pause On: {pause_on}')
-            if pause_on == None:
-                run_music()
-                pause_on = False
-
-            elif not pause_on:
-                pause_music()
-                print('Music pause')
-                pause_on = True
-
-            elif pause_on:
-                unpause_music()
-                print('Music unpause')
-                pause_on = False
-
+            match (pause_on):
+                case None:
+                    run_music()
+                    pause_on = False
+                case False:
+                    pause_music()
+                    print('Music pause')
+                    pause_on = True
+                case True:
+                    unpause_music()
+                    print('Music unpause')
+                    pause_on = False
         # arrows control
         elif event == 'button-next-music':
+            system('cls')
             next_music()
             pause_on = False
 
         elif event == 'button-previous-music':
+            system('cls')
             previous_music()
             pause_on = False
 
         # stop control
         elif event == 'Cancel playlist':
             stop_music()
-            pause_on = None
+            pause_on = None        
     # close
     window.close()

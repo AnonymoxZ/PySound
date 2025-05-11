@@ -56,7 +56,7 @@ def unpause_music():
 
 def stop_music():
     global music_playing
-    print(f'Canceling: {audiodb.files_musics[music_playing]}')
+    print(f'Canceling: {audiodb.text_musics[music_playing]}')
     mixer.music.stop()
     mixer.music.unload()
     music_playing = 0
