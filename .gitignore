@@ -176,4 +176,3 @@ cython_debug/
 # docs
 docs/*nota.txt
 *setup.bat
-audio_files/
