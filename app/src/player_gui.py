@@ -55,7 +55,7 @@ def Player():
                 pause_on = True
 
             elif pause_on:
-                despause_music()
+                unpause_music()
                 print('Music unpause')
                 pause_on = False
 

@@ -48,7 +48,7 @@ def pause_music():
     mixer.music.pause()
 
 
-def despause_music():
+def unpause_music():
     global music_playing
     print(f'Unpausing: {audiodb.text_musics[music_playing]}')
     mixer.music.unpause()
