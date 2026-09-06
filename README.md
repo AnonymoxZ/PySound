@@ -1,5 +1,6 @@
 # PySound
 
+
 PySound is a small desktop music player written in Python. It has a simple graphical interface for browsing the local playlist and controlling playback.
 
 The project is still a prototype, but it is already able to:
