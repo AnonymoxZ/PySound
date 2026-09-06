@@ -1,2 +1,0 @@
-pygame 2.6.1
-PySimpleGUI 5.0.8
