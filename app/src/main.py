@@ -1,5 +1,10 @@
-# PySound vPrototype 2025 - by AnonymoxZ
-from player_gui import Player
+# PySound v2.026 - by AnonymoxZ
+from player_ui import PySound
+
+
 
 # run app
-Player()
+app = PySound()
+app.player_ui()
+app.playlist_ui()
+app.mainloop()
