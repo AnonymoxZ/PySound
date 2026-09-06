@@ -78,7 +78,7 @@ PySound/
 
 ## Screenshots
 
-<img src='/screenshots/PySound_01.png' width=300 height=400>
+<img src='/screenshots_project/PySound_01.png' width=300 height=400>
 
 
 ## Current limitations
